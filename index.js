@@ -28,12 +28,12 @@ const requestLogger = (request, response, next) => {
   console.log('---')
   next()
 }
-const cors = require('cors')
+
 
 
 app.use(express.json())
 app.use(requestLogger)
-app.use(cors())
+
 app.use(express.static('dist'))
 
 app.get('/', (request, response) => {
